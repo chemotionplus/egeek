@@ -1,0 +1,302 @@
+
+.tete1
+{
+    display: flex;
+    padding-right:  80px;
+    align-items: baseline;
+}
+
+header
+{
+    display: flex;
+    margin-bottom: -40px;
+}
+
+nav
+{
+    padding-top: 15px;
+    padding-left: 80px;
+}
+/*Strip the ul of padding and list styling*/
+ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position: absolute;
+}
+
+
+/*Create a horizontal list with spacing*/
+li {
+    display:inline-block;
+    float: left;
+    margin-right: 1px;
+}
+/*Style for menu links*/
+li a {
+    display:block;
+    min-width:130px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    background:skyblue;
+    text-decoration: none;
+}
+/*Hover state for top level links*/
+li:hover a {
+    background: #19c589;
+}
+/*Style for dropdown links*/
+li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+/*Hide dropdown links until they are needed*/
+li ul {
+    display: none;
+}
+/*Make dropdown links vertical*/
+li ul li {
+    display: block;
+    float: none;
+}
+/*Prevent text wrapping*/
+li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+    z-index: 1000;
+}
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: #19c589;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ nav #menu{
+    display: block;
+
+}
+
+.champ
+{
+    height: 50px;
+    width: 350px;
+    border: 1px solid black;
+    padding-left: 1.5%;
+}
+
+.formulaire
+{
+    margin-left:34.5%;
+}
+
+#bouton1,#bouton2
+{
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 50px;
+    /*box-shadow: 4px 4px 0px #1c1a19;*/
+    line-height: 20px;
+    text-align: center;
+}
+
+#bouton1
+{
+    background-color: lightgreen;
+    /*margin-right:30%;*/
+    margin-right: 2%;
+    border: 0 solid black;
+    
+}
+
+#bouton2
+{
+    background-color: lightblue;
+    border: 0px solid lightgreen;
+    
+    color: black;
+}
+
+#group_bouton
+{
+    display: flex;
+
+}
+
+#banniere_image_contact
+{
+     margin-top: 90px;
+    height: 500px;
+    
+    background-image: url('../images/banniere_contact.jpeg');
+    background-size: cover;
+    position: relative;
+    
+    margin-bottom: 0;
+}
+
+
+.com
+{
+  border: 1px solid black;  
+  padding-left: 1.5%;
+}
+
+#section-contact
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.entete_cont
+{
+    text-align: center;
+}
+
+@media screen and (max-width : 760px)
+{
+    header
+    {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .tete1
+    {
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        margin-left: 35%;
+
+    }
+    
+    
+    /*Make dropdown links appear inline*/
+    ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    ul li, li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    .show-menu {
+        display:block;
+    }
+
+    #logo img 
+    {
+        width: 50%;
+    }
+
+    #logo h6
+    {
+        font-size: 110%;
+
+    }
+
+     #group_bouton
+    {
+        display: flex;
+        flex-direction: column;
+        /*margin-right: 35%;*/
+    }
+
+    #bouton1,#bouton2
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #bouton2
+    {
+        margin-top: 10px;
+    }
+
+    .formulaire
+    {
+        margin: auto;
+    }
+    .com
+    {
+        width: 240px;
+    }
+
+    .champ
+    {
+        width: 240px;
+    }
+
+    #bouton1
+    {
+        margin-right: 0;
+        padding-right: 7px;
+    }
+
+}
+
+@media screen and (min-width:750px) and (max-width: 1024px)
+{
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2%;
+        width: 100%;
+        padding-left: 10%;
+    }
+
+    nav
+    {
+        padding-left: 0;
+        
+    }
+
+    .tete1
+    {
+       margin-left: 35%; 
+    }
+
+    .ima
+    {
+        width: 35px;
+    }
+    .im
+    {
+        text-align: center;
+    }
+
+    nav li a
+    {
+        min-width: 100px;
+    }
+}
